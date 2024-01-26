@@ -1,6 +1,7 @@
 package com.example.drawer_exm7.presentation.screen
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.drawer_exm7.databinding.DrawerItemBinding
@@ -20,16 +21,15 @@ class MainRecyclerAdapter : RecyclerView.Adapter<MainRecyclerAdapter.MainViewHol
         )
     }
 
-    override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-        holder.bind()
-    }
-
     fun setData(newList: List<DrawerItem>) {
         drawerItems = newList
     }
 
     override fun getItemCount(): Int = drawerItems.size
 
+    override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
+        holder.bind()
+    }
 
     inner class MainViewHolder(private val binding: DrawerItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -40,7 +40,10 @@ class MainRecyclerAdapter : RecyclerView.Adapter<MainRecyclerAdapter.MainViewHol
             with(binding) {
                 ivItemIcon.setImageResource(drawerItem.icon)
                 tvDrawerText.text = drawerItem.text
-                tvMessageAmount.text = drawerItem.messageAmount?.toString()
+                tvMessageAmount.text = drawerItem.messageAmount?.let {
+                    tvMessageAmount.visibility = View.VISIBLE
+                    it.toString()
+                }
             }
         }
     }

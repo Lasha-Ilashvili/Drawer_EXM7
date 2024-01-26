@@ -7,8 +7,8 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivItemIcon"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_gravity="start|center_vertical"
         tools:src="@drawable/ic_mailbox" />
 
@@ -16,16 +16,18 @@
         android:id="@+id/tvDrawerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="14sp"
         android:layout_gravity="center_vertical|center_horizontal"
         tools:text="Dashboard" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvMessageAmount"
         android:layout_width="wrap_content"
+        android:visibility="gone"
         android:layout_height="wrap_content"
         android:layout_gravity="end|center_vertical"
         android:background="@drawable/button_bg"
-        android:padding="5dp"
+        android:padding="6dp"
         tools:text="15" />
 
 </FrameLayout>
