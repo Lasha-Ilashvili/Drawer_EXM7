@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Drawer_EXM7</string>
+    <string name="fyneen">Fyneen</string>
+    <string name="personal">Personal</string>
+    <string name="business">Business</string>
+    <string name="dark_mode_switch">Dark Mode Switch</string>
+    <string name="amanda_rachel">Amanda Rachel</string>
+    <string name="amandaer_gmail_com">amandaer@gmail.com</string>
+</resources>

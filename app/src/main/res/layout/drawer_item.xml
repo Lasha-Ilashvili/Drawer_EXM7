@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="14dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivItemIcon"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_gravity="start|center_vertical"
+        tools:src="@drawable/ic_mailbox" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDrawerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        tools:text="Dashboard" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMessageAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:background="@drawable/button_bg"
+        android:padding="5dp"
+        tools:text="15" />
+
+</FrameLayout>
